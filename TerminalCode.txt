@@ -1,0 +1,10 @@
+# Current dir .
+docker build -t nginx_demo:v1 .
+
+# Lap Port 8080 | Docker image virtual port 80 | image name and version demo:v1
+docker run -p 8080:80 nginx_demo:v1
+
+
+#Docker to docker hub
+docker tag nginx_demo:v1 chalakahasantha/nginx_demo:v1
+docker push chalakahasantha/nginx_demo:v1
